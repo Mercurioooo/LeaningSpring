@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+	<bean id="student" class= "org.ljn.entity.Student">
+		<property name="name" value="ljn" />
+		<property name="age" value="20" />
+		<property name="number" value="28" />	
+	</bean>
+
+	<bean id="student1" class= "org.ljn.entity.Student">
+	<!-- name,number,age -->
+		<constructor-arg value = "jack"></constructor-arg>
+		<constructor-arg value = "123"></constructor-arg>
+		<constructor-arg value = "35"></constructor-arg>
+	</bean>
+	
+	<bean id="student2" class= "org.ljn.entity.Student">
+	<!-- name,number,age -->
+		<constructor-arg index="1" value = "35"></constructor-arg>
+		<constructor-arg index="2" value = "123"></constructor-arg>
+		<constructor-arg index="0" value = "jack"></constructor-arg>
+	</bean>
+	
+	
+	<bean id="teacher" class = "org.ljn.entity.Teacher" p:student-ref="student1" p:name="ls"></bean>
+</beans>
