@@ -9,7 +9,7 @@ public class Test {
 	public static void main(String[] args) {
 		ApplicationContext context = new ClassPathXmlApplicationContext("applicationContext.xml");
 		//Student student = (Student)context.getBean("student");
-		Teacher teacher = (Teacher)context.getBean("teacher");
+		Teacher teacher = (Teacher)context.getBean("teacher2");
 		System.out.println(teacher);
 	}
 }

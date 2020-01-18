@@ -4,6 +4,14 @@ package org.ljn.entity;
 public class Teacher {
 	String name;
 	Student student;
+	public Teacher() {
+		
+	}
+	public Teacher(String name, Student student) {
+		super();
+		this.name = name;
+		this.student = student;
+	}
 	public String getName() {
 		return name;
 	}

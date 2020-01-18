@@ -14,7 +14,15 @@
 		<property name="number" value="123"/>
 	</bean>
 	
-	<bean id="teacher" class="org.ljn.entity.Teacher" autowire="byName">
+	<bean id="teacher" class="org.ljn.entity.Teacher" autowire="byType">
+		<property name="name" value="ljn"></property>
+	
+	</bean>
+	<bean id="teacher1" class="org.ljn.entity.Teacher" autowire="byName">
+		<property name="name" value="ljn"></property>
+	
+	</bean>
+	<bean id="teacher2" class="org.ljn.entity.Teacher" autowire="constructor">
 		<property name="name" value="ljn"></property>
 	
 	</bean>
