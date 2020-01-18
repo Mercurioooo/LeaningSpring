@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:aop="http://www.springframework.org/schema/aop"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-4.3.xsd">
+	
+	<bean id = "student" class="org.ljn.entity.Student">
+		<property name="name" value = "ljn"></property>
+		<property name="age" value = "18"></property>
+	 	<property name="number" value = "1"></property>
+	</bean>
+
+
+	<bean id = "student1" class="org.ljn.entity.Student">
+		<property name="name" > 
+			<value>ljn</value>
+		</property>
+		<property name="age">
+			<value>18</value>
+		</property>
+	 	<property name="number">
+	 		<value>30</value>
+	 	</property>
+	</bean>
+	
+	<!-- "" -->
+	<bean id = "student2" class="org.ljn.entity.Student">
+		<property name="name" value = ""></property>
+		<property name="age" value = "18"></property>
+	 	<property name="number" value = "1"></property>
+	</bean>
+	
+	<!-- "" -->
+	<bean id = "student3" class="org.ljn.entity.Student">
+		<property name="name" > 
+			<value></value>
+		</property>
+		<property name="age">
+			<value>18</value>
+		</property>
+	 	<property name="number">
+	 		<value>30</value>
+	 	</property>
+	</bean>
+	
+	<!-- null -->
+	<bean id = "student4" class="org.ljn.entity.Student">
+		<property name="name" >
+			<null/>
+		</property>
+		<property name="age" value = "18"></property>
+	 	<property name="number" value = "1"></property>
+	</bean>
+	
+</beans>
